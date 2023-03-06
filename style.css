@@ -1,0 +1,26 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-color:#03045E ;
+  color:#00B4D8;
+  text-align: center;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  background-color: #0077B6;
+  padding: 20px;
+  width: 620px;  
+}
+
+button{
+  height: 60px;
+  width: 60px;
+  background-color: #00B4D8;
+  font-size: 20px;
+  color: #CAF0F8;
+  text-align: center;
+  display: inline-block;
+}
