@@ -1,5 +1,13 @@
 var randomNumbers = []
 title = document.getElementById("title")
+
+function pickStartSpot(){
+    var rndNum = Math.random()*16;
+    rndNum = Math.floor(rndNum);
+    var startBtn = document.getElementById(rndNum);
+    startBtn.innerHTML = 0;
+    startBtn.style.backgroundColor = "#03045E";  
+  }
 function makeButtons(){
   title.innerHTML = "Give it a sec, we have to do some work first"
   fillArray();
@@ -11,6 +19,7 @@ function makeButtons(){
       var first = document.getElementById(i);
       first.innerHTML = randomNumbers[i];   
   }
+  pickStartSpot()
 }
 function fillArray(){
   while(randomNumbers.length < 16){
