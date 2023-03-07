@@ -1,3 +1,4 @@
+var randomNumbers = []
 title = document.getElementById("title")
 function makeButtons(){
   title.innerHTML = "Give it a sec, we have to do some work first"
@@ -12,4 +13,15 @@ function makeButtons(){
   }
  
   
+}
+
+function fillArray(){
+  while(randomNumbers.length < 16){
+    var rndNum = Math.random()*16;
+    rndNum = Math.ceil(rndNum);
+    if(!randomNumbers.includes(rndNum)){
+      randomNumbers.push(rndNum);
+    }
+  }//end loop
+  console.log(randomNumbers)
 }
