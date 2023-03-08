@@ -24,6 +24,20 @@ function makeButtons(){
 }
 var thisClicked = function(){
   console.log(this.id)
+  checkAbove(this.id)
+  
+}
+function checkAbove(thisSquare){
+  //thisSquare is going to hold the id of the button the 
+  //user pressed.
+  if(thisSquare >3){
+    //This means we are in rows 2, 3 or 4.
+    var squareAbove = document.getElementById(thisSquare - 4);
+    if(squareAbove.innerHTML == 0){
+      //the square above is open
+      console.log("My algo worked i am really happy.")
+    }
+  }
 }
 function fillArray(){
   while(randomNumbers.length < 16){
