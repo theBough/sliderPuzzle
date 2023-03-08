@@ -17,9 +17,13 @@ function makeButtons(){
       btn.setAttribute("id" , i);
       theGrid.appendChild(btn);
       var first = document.getElementById(i);
-      first.innerHTML = randomNumbers[i];   
+      first.innerHTML = randomNumbers[i];  
+      first.onclick = thisClicked;
   }
   pickStartSpot()
+}
+var thisClicked = function(){
+  console.log(this.id)
 }
 function fillArray(){
   while(randomNumbers.length < 16){
