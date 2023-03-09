@@ -33,9 +33,18 @@ function checkAbove(thisSquare){
   if(thisSquare >3){
     //This means we are in rows 2, 3 or 4.
     var squareAbove = document.getElementById(thisSquare - 4);
+    var clickedSquare = document.getElementById(thisSquare);
+    
     if(squareAbove.innerHTML == 0){
       //the square above is open
       console.log("My algo worked i am really happy.")
+      var temp = clickedSquare.innerHTML;
+      clickedSquare.innerHTML = "0";
+      //this is the colour of the open spot.
+      clickedSquare.style.backgroundColor = "#03045E"
+      //this is the colour of all my buttons
+      squareAbove.style.backgroundColor = "#00B4D8"
+      squareAbove.innerHTML = temp;
     }
   }
 }
