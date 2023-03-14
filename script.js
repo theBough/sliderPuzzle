@@ -1,3 +1,4 @@
+var enterBtn = document.getElementById("hmm");
 var randomNumbers = []
 title = document.getElementById("title")
 
@@ -19,6 +20,13 @@ function makeButtons(){
       var first = document.getElementById(i);
       first.innerHTML = randomNumbers[i];  
       first.onclick = thisClicked;
+      var img = document.createElement("img")
+      img.setAttribute("type","img");
+      img.setAttribute("width","150px");
+      img.setAttribute("height","150px")
+      img.setAttribute("src" , "peter.jpg");
+      
+      document.getElementById(i).appendChild(img);
   }
   pickStartSpot()
 }
@@ -122,3 +130,6 @@ function fillArray(){
   }//end loop
   console.log(randomNumbers)
 }
+
+
+
