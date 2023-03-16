@@ -22,9 +22,10 @@ function makeButtons(){
       first.onclick = thisClicked;
       var img = document.createElement("img")
       img.setAttribute("type","img");
-      img.setAttribute("width","150px");
-      img.setAttribute("height","150px")
-      img.setAttribute("src" , i + ".gif");
+      img.setAttribute("width","120px");
+      img.setAttribute("height","120px")
+      var offsetByOne = Number(randomNumbers[i]) + 1
+      img.setAttribute("src" , offsetByOne + ".gif");
       
       document.getElementById(i).appendChild(img);
   }
