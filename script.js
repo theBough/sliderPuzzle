@@ -10,7 +10,7 @@ function pickStartSpot(){
     startBtn.style.backgroundColor = "#03045E";  
   }
 function makeButtons(){
-  title.innerHTML = "Give it a sec, we have to do some work first"
+  title.innerHTML = document.getElementById("btnStart").name
   fillArray();
   for(i =0 ; i< 16 ; i++){
       var btn = document.createElement("button");
@@ -24,7 +24,7 @@ function makeButtons(){
       img.setAttribute("type","img");
       img.setAttribute("width","150px");
       img.setAttribute("height","150px")
-      img.setAttribute("src" , "peter.jpg");
+      img.setAttribute("src" , i + ".gif");
       
       document.getElementById(i).appendChild(img);
   }
